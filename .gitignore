@@ -7,4 +7,4 @@ __pycache__/
 node_modules/
 .github/
 env.py
-__pycache__
+__pycache__/
