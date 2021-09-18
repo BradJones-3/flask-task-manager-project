@@ -7,6 +7,18 @@
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <select id="catergory_name" name="catergory_name" class="validate" required>
+                        <option value="" disabled selected>Choose Catergory</option>
+                        {% for catergory in catergories %}
+                            <option value="{{ catergory.catergory_name }}">{{ catergory.catergory_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Task Catergory</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="task_name" name="task_name" min-length="5" maxlength="50" type="text" class="validate"
                         required>
